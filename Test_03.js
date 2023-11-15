@@ -40,8 +40,9 @@ function replaceSize(url, size) {
   let match = url.match(regex);
 
   if (match) {
-    let phanTu = match[1];
-    url = url.replace(`_${phanTu}`, `_${size}`);
+    let element = match[1];
+    console.log(element)
+    url = url.replace(`_${element}`, `_${size}`);
   } else {
     url = url.replace(".jpg", `_${size}.jpg`);
   }
